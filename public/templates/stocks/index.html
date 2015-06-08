@@ -1,0 +1,17 @@
+<h1>Watchlist</h1>
+<div ng-controller="StocksCtrl">
+  <form ng-submit="createStock()">
+    <input type="text" ng-model='newSymbol' placeholder="Enter a symbol">
+    <input type="submit" value="Add">
+  </form>
+  <div ng-show="error">
+    There was a problem with the Yahoo Finance API. Please try again later.
+  </div>
+  <ul>
+    <li ng-repeat="stock in stocks">
+      <a href="/#/stock/{{$index}}">{{stock.symbol}}, {{stock.name}}</a>
+      <a href='' ng-click="deleteStock(stock.id, $index)">Delete</a>
+    </li>
+     <a href="#stocks">Back</a>
+  </ul>
+</div>

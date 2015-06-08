@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app='StockWatch'>
+<head>
+  <title>Stockwatch</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"%>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+<h1>Blog</h1>
+<a href="#/">Home</a>
+<a href="#/about">About</a>
+</div>
+<div ng-view></div>
+
+</body>
+</html>
